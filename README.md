@@ -24,7 +24,23 @@ So let’s use some inductive reasoning and have some fun!
 
 Also, note to self, monkeyman192 suggested using the latest NMSTemplate.cs as a lot of issues have been fixed since 1.38.3. This may apply to other base structs. 
 
-**original readme as follows**
+
+### info
+
+mbincompiler base version: `1.38.3`
+
+game base version: 1.38 Atlas Rises
+
+### links
+
+- [No Man’s Sky Archive](https://github.com/Lenni009/nms-archive)
+ 
+- [MBINCompiler](https://github.com/monkeyman192/mbincompiler)
+ 
+- [No Man’s Sky Retro (instructions on how to get older versions!)](https://nomansskyretro.com)
+
+
+## original readme as follows
 # MBINCompiler
 
 *Updated version to Emoose’s project originally found here: https://github.com/emoose/MBINCompiler
