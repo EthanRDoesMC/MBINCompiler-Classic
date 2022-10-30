@@ -7,9 +7,10 @@
         /* 0x14 */ public float FontSpacing;
         /* 0x18 */ public bool IsIndented;
         /* 0x19 */ public bool HasDropShadow;
+            // ...that's a big jump for a one-byte type! probably ShadowColour in here...
         /* 0x1C */ public float DropShadowOffset;
         /* 0x20 */ public bool HasOutline;
-
+            // matching jump here, likely OutlineColour
         /* 0x24 */ public float OutlineSize;
         /* 0x28 */ public bool IsParagraph;
         /* 0x29 */ public bool AllowScroll;
