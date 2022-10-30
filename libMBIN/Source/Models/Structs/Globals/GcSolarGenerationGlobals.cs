@@ -2,36 +2,39 @@
 {
     public class GcSolarGenerationGlobals : NMSTemplate
     {
-        /* 0x0 */ public bool Unknown0;
+        /* 0x0 */ public bool MassiveSolarSystems;
         [NMS(Size = 0xF, Ignore = true)]
-        /* 0x1 */ public byte[] Padding1;
-        /* 0x10 */ public float Unknown10;
-        /* 0x14 */ public float Unknown14;
-        /* 0x18 */ public float Unknown18;
-        /* 0x1C */ public float Unknown1C;
-        /* 0x20 */ public float MinSolarSystemScale;        // ??
-        /* 0x24 */ public float MaxSolarSystemScale;        // ??       used instead of +0x20 if +0x0 is True
+        /* 0x1 */ public byte[] Padding1; // SolarSystemSize, vector4f
+        /* 0x10 */ public float Unknown10; //x
+        /* 0x14 */ public float Unknown14; //y
+        /* 0x18 */ public float Unknown18; //z
+        /* 0x1C */ public float Unknown1C; //t
+        /* 0x20 */ public float SolarSystemMaximumRadius;               // if not massive
+        /* 0x24 */ public float SolarSystemMaximumRadiusMassive;        // used instead of +0x20 if +0x0 is True
         [NMS(Size = 0x8, Ignore = true)]
-        /* 0x28 */ public byte[] Padding28;
-        /* 0x30 */ public bool PlanetBuildingRaceMatchesSystemRace;
-        /* 0x34 */ public float Unknown34;
+        /* 0x28 */ public byte[] Padding28; //no idea
+        /* 0x30 */ public bool UseSingleRacePerSystem;
+    // PerPlanetGenerationAngleChangeDegreesRange x,y
+        /* 0x34 */ public float Unknown34; 
         /* 0x38 */ public float Unknown38;
+    // PerPlanetGenerationElevationChangeDegreesRange x,y
         /* 0x3C */ public float Unknown3C;
         /* 0x40 */ public float Unknown40;
+    // SpawnPointStationToPlanetInterpRange x,y
         /* 0x44 */ public float Unknown44;
         /* 0x48 */ public float Unknown48;
         /* 0x4C */ public float ExtremeWeatherChance;
-        /* 0x50 */ public float Unknown50;
-        /* 0x54 */ public int UnknownInt54;
-        /* 0x58 */ public int UnknownInt58;
-        /* 0x5C */ public float Unknown5C;
-        /* 0x60 */ public int UnknownInt60;
-        /* 0x64 */ public int UnknownInt64;
-        /* 0x68 */ public float Unknown68;
-        /* 0x6C */ public float Unknown6C;
-        /* 0x70 */ public float AsteroidMinDistanceFromPlanets;
-        /* 0x74 */ public bool Unknown74;
-        /* 0x75 */ public bool Unknown75;
+        /* 0x50 */ public float StationSpawnAvoidRadius;
+        /* 0x54 */ public int LocatorScatterMinCount;
+        /* 0x58 */ public int LocatorScatterMaxCount;
+        /* 0x5C */ public float LocatorScatterMaxDistanceFromPlanet;
+        /* 0x60 */ public int LocatorScatterChanceOfCapitalShips;
+        /* 0x64 */ public int LocatorScatterChanceOfPirates;
+        /* 0x68 */ public float DirectorLocatorBusyDistance;
+        /* 0x6C */ public float DirectorLocatorBusyAngle;
+        /* 0x70 */ public float PlanetInvalidAsteroidZone; // minimum distance from planet
+        /* 0x74 */ public bool AsteroidsEnabled;
+        /* 0x75 */ public bool AsteroidsCheckNoise;
         [NMS(Size = 0x2, Ignore = true)]
         /* 0x76 */ public byte[] Padding76;
         /* 0x78 */ public float AsteroidNoiseDistribution;
