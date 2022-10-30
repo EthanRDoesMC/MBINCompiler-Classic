@@ -31,6 +31,9 @@ def pytest_generate_tests(metafunc):
 
 @pytest.fixture()
 def MBINCompiler(platform):
+    mbincompiler_path = os.environ.get('mbincompiler_path')
+    if mbincompiler_path:
+        return [op.join(mbincompiler_path, 'MBINCompiler.exe'), '-q']
     if platform == 'linux-x64':
         # need to run with mono on linux
         # Build path also includes platform on the CI

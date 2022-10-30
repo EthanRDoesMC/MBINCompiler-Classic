@@ -32,6 +32,8 @@ def pytest_addoption(parser):
     parser.addoption("--report", action="store_true", default=False,
                      help="Whether to output a report of the failure to the "
                           "local directory.")
+    parser.addoption("--mbincompiler_path", action="store",
+                     help="Path to the MBINCompiler binary you want to test.")
 
 
 def pytest_generate_tests(metafunc):
@@ -51,6 +53,9 @@ def pytest_sessionstart(session):
     # Before running any tests collect the required test data.
     datapath = session.config.getoption('datapath')
     use_cache = session.config.getoption('use_cache')
+    mbincompiler_path = session.config.getoption('mbincompiler_path')
+    if mbincompiler_path:
+        os.environ['mbincompiler_path'] = mbincompiler_path
     if datapath is not None and use_cache:
         print("Providing both 'datapath' and 'use_cache' command line "
               "arguments doesn't mean anything. 'datapath' will take "
