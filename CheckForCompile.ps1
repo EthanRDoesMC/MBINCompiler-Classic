@@ -6,6 +6,8 @@ param([bool]$mbin=$false, [bool]$verbose=$true, [bool]$excludeModels=$true)
 #
 # Please make sure to fill in the path to MBIN Compiler (or a link to MBIN Compiler below)
 
+# This is not even remotely portable! Does modern mbinc have a better version?
+
 $MBINCompilerLocation = 'S:\Game Mods\No Mans Sky\Tools\_Toolbox\MBINCompiler.exe.lnk'
 
 
