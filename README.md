@@ -1,6 +1,6 @@
 # MBINCompiler Classic for Atlas Rises
 
-### links
+### Links
 - [No Man’s Sky Archive](https://github.com/Lenni009/nms-archive) (all mbins from each update!)
 - [MBINCompiler](https://github.com/monkeyman192/mbincompiler)
 - [No Man’s Sky Retro](https://nomansskyretro.com) (instructions on how to get older versions!)
