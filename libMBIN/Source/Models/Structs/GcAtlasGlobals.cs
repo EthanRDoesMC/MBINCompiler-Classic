@@ -8,3 +8,4 @@
         public int SendRecvTimeout;
     }
 }
+// this is a global, why is it here?
