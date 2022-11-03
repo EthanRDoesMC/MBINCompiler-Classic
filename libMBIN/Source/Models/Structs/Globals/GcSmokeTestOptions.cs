@@ -7,8 +7,8 @@
         /* 0x08 */ public float CameraHeight; // 4.5
         /* 0x0C */ public float CameraMoveSpeed; // 5
         
-        // have these changed? are smoke tests in use? 
-        /* 0x10 */ public int Unknown10; // 0 (unused?)
+        // have these changed? are smoke tests in use? | almost certainly; compare with known NEXT struct and vals -ethanr
+        /* 0x10 */ public int CameraRotateSpeed; // 0 (unused?) | doubt! it is 5 in NEXT
         /* 0x14 */ public int Unknown14; // 0
         /* 0x18 */ public int Unknown18; // 0 (unused?)
         /* 0x1C */ public int Unknown1C; // 25 (unused?)
