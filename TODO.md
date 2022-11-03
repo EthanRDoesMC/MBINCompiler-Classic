@@ -7,3 +7,6 @@
 - MBINCompiler classes should be sync’d with upstream
     - version
     - nmstemplate
+
+- reorganize mbincompiler to match upstream
+    -  https://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/
