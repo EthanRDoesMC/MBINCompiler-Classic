@@ -2,52 +2,49 @@
 {
     public class GcSpaceshipGlobals : NMSTemplate
     {
-        /* 0X0 */ public bool RollAndYawKeySwap;
-        /* 0X1 */ public bool ThirdPersonCamera;
-        /* 0X2 */ public bool Unknown2;
-        /* 0X3 */ public bool Unknown3;
-        /* 0X4 */ public bool Unknown4;
-        /* 0X5 */ public bool Unknown5;
-        /* 0X6 */ public bool Unknown6;
-        /* 0X7 */ public bool Unknown7;         // unused?
-        /* 0X8 */ public float Unknown8;
-        /* 0XC */ public float UnknownC;
-        /* 0X10 */ public float ThrustInputDelay;
-        /* 0X14 */ public float Unknown14;
-        /* 0X18 */ public float Unknown18;
-        /* 0X1C */ public float Unknown1C;
-        /* 0X20 */ public float Unknown20;
-        /* 0X24 */ public float Unknown24;
-        /* 0X28 */ public float Unknown28;
-        /* 0X2C */ public float Unknown2C;
-        /* 0X30 */ public float Unknown30;
-        /* 0X34 */ public float Unknown34;
-        /* 0X38 */ public float Unknown38;
-        /* 0X3C */ public float Unknown3C;
-        /* 0X40 */ public float Unknown40;
-        /* 0X44 */ public bool Unknown44;
-        /* 0X48 */ public float Unknown48;
-        /* 0X4C */ public float Unknown4C;
-        /* 0X50 */ public float Unknown50;
-        /* 0X54 */ public float Unknown54;
-        /* 0X58 */ public float Unknown58;
+        /* 0X0 */ public bool AltControls; // false
+        /* 0X1 */ public bool _3rdPersonShipEnabled; // false -- probably true in NEXT
+        /* 0X2 */ public bool SpaceMapInWorld; // true -- EVERYTHING FROM HERE TO 0x7
+        /* 0X3 */ public bool AimZoomAuto; // false    -- IS CONJECTURE ON MY PART -ethan
+        /* 0X4 */ public bool EnableDepthTestedCrosshairSections; // false -- why?
+        /* 0X5 */ public bool CritsFromBehind; // true
+        /* 0X6 */ public bool DrawLineLockTarget; // true
+        /* 0X7 */ public bool SpeedTrackModeEnabled; // false -- skipping a few from next in hopes that mm is right     // unused?
+        /* 0X8 */ public float WeaponDamagePotentialReferenceRange; // starting at LINE 253 in NEXT exml
+        /* 0XC */ public float PadTurnSpeed;
+        /* 0X10 */ public float KBThrustSmoothTime;
+        /* 0X14 */ public float HoverTakeofffTime;
+        /* 0X18 */ public float HoverTime;
+        /* 0X1C */ public float HoverAlignTime;
+        /* 0X20 */ public float HoverSpeedFactor;
+        /* 0X24 */ public float HoverHeightFactor;
+        /* 0X28 */ public float HoverMinSpeed;
+        /* 0X2C */ public float HoverLandReachedMinTime;
+        /* 0X30 */ public float HoverLandReachedDistance;
+        /* 0X34 */ public float HoverLandManeuvreTimeMin;
+        /* 0X38 */ public float HoverLandManeuvreTimeMax;
+        /* 0X3C */ public float HoverLandManeuvreBrake;
+        /* 0X40 */ public float LandingOnGroundTip;
+        /* 0X44 */ public bool LandingCheckBuildings; // == false, why? lmao
+        /* 0X48 */ public float LandingCheckBuildingRadiusFactor;
+        /* 0X4C */ public float AutoLevelWaterMargin;
+        /* 0X50 */ public float AutoLevelWaterTorque;
+        /* 0X54 */ public float AutoLevelWaterAngle;
+        /* 0X58 */ public float AutoLevelPitchCorrectMargin;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0X5C */ public byte[] Padding5C;
-        /* 0X60 */ public float Unknown60;
-        /* 0X64 */ public float Unknown64;
-        /* 0X68 */ public float Unknown68;
-        /* 0X6C */ public float Unknown6C;      // unused?
-        /* 0X70 */ public float Unknown70;
-        /* 0X74 */ public float Unknown74;
-        /* 0X78 */ public float Unknown78;
-        /* 0X7C */ public float Unknown7C;
-        /* 0X80 */ public float Unknown80;
-        /* 0X84 */ public float Unknown84;
-        /* 0X88 */ public float Unknown88;
-        /* 0X8C */ public int UnknownInt8C;
-        /* 0X90 */ public float Unknown90;
-        /* 0X94 */ public float Unknown94;
-        /* 0X98 */ public int UnknownInt98;
+        /* 0X60 */ public Vector4f PostCollisionAngularFactor;
+        /* 0X70 */ public float DrawLineLockTargetLineWidth;
+        /* 0X74 */ public float DamageFlashScale;
+        /* 0X78 */ public float DamageFlashMin;
+        /* 0X7C */ public float LandingButtonMinTime;
+        /* 0X80 */ public float LandingPushNoseUpFactor;
+        /* 0X84 */ public float GroundHeightSoft; // could be GroundHeightSoftForce... relying on parallel with Hard
+        /* 0X88 */ public float GroundHeightSoftHorizontal;
+        /* 0X8C */ public TkCurveType GroundHeightSoftCurve;
+        /* 0X90 */ public float GroundHeightHard;
+        /* 0X94 */ public float GroundHeightHardHorizontal;
+        /* 0X98 */ public TkCurveType GroundHeightHardCurve;
         /* 0X9C */ public float Unknown9C;
         /* 0XA0 */ public float UnknownA0;
         /* 0XA4 */ public float UnknownA4;
