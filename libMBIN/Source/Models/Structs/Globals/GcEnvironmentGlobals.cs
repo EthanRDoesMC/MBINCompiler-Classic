@@ -2,17 +2,16 @@
 {
     public class GcEnvironmentGlobals : NMSTemplate
     {
-        public float Unknown0;
-        public float Unknown4;
+        /* 0x000 */ public Vector2f SpaceBuildingTemperature;
         [NMS(Size = 8, Ignore = true)]
         public byte[] Padding8;
-        public GcCloudProperties Unknown10;
-        public float Unknown100;
-        public float Unknown104;
-        public float Unknown108;
-        public float Unknown10C;
-        public bool Unknown110;         // only checked on system warp          related to caves
-        public bool Unknown111;         // only checked on system warp          related to caves
+        /* 0x010 */ public GcCloudProperties CloudProperties;
+        /* 0x100 */ public float SenseProbingValueSmoothingTime;
+        /* 0x104 */ public float SenseProbingValueSmoothingTimeSlow;
+        /* 0x108 */ public float MaxElevation;
+        /* 0x10C */ public float SphereLodTextureScale;
+        /* 0x110 */ public bool ForceAddUnderwaterProps;         // only checked on system warp          related to caves
+        /* 0x111 */ public bool ForceAddCaveProps;               // only checked on system warp          related to caves
         public float Unknown114;
         public float Unknown118;
         public float Unknown11C;
