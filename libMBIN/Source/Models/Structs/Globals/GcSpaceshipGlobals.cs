@@ -13,7 +13,7 @@
         /* 0X8 */ public float WeaponDamagePotentialReferenceRange; // starting at LINE 253 in NEXT exml
         /* 0XC */ public float PadTurnSpeed;
         /* 0X10 */ public float KBThrustSmoothTime;
-        /* 0X14 */ public float HoverTakeofffTime;
+        /* 0X14 */ public float HoverTakeoffTime;
         /* 0X18 */ public float HoverTime;
         /* 0X1C */ public float HoverAlignTime;
         /* 0X20 */ public float HoverSpeedFactor;
