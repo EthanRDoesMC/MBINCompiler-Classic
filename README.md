@@ -22,6 +22,21 @@ So let’s use some inductive reasoning and have some fun!
 
 ~ethanrdoesmc
 
+# how to help!
+
+1. Open up two windows: one with the Atlas Rises version of a globals exml, and the other with the NEXT version of that globals exml. https://github.com/Lenni009/nms-archive/ is a great source. 
+2. Start making comparisons. Hit ctrl-f and look for values that match between the two. 
+3. If you think you’ve got a match, go ahead and change the name in mbincompiler-classic! Make sure to include a block comment with the offset for the property if there isn’t one already, like so: 
+
+if the property was named Unknown7D:
+`/* 0x07D */ public…`
+
+Then just make a pull request!
+
+Tips:
+- try to find groups of matching values! It makes it go a lot faster, and you’ll start to find your way around the globals file. This is *especially helpful* with Bools since they’re otherwise extremely hard to match.
+- if you’re not sure about one, just leave a comment after the semicolon. 
+- if everything lines up (it’s in a group, the type is right, and the property is where it should be) but the value is different, consider that the value may have changed between AR and NEXT. See if the change makes sense with the context of the name.
 
 
 ## original readme as follows
