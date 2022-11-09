@@ -20,6 +20,7 @@
         /* 0x07BC */ public TkTextureResource BattleSmall;
         /* 0x0840 */ public TkTextureResource TimedEvent;
         /* 0x08C4 */ public TkTextureResource Checkpoint;
+        /* 0x???? */ public TkTextureResource Garage; // yeah, this was missing... offsets are very wrong from here...
         /* 0x0948 */ public TkTextureResource CircleAnimation;
         /* 0x09CC */ public TkTextureResource HexAnimation;
         /* 0x0A50 */ public TkTextureResource ArrowSmall;
