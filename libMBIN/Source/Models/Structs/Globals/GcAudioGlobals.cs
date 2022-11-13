@@ -23,7 +23,7 @@
         /* 0x08C */ public float DroneDopplerExtentsFactor;
         /* 0x090 */ public float DistanceReportMin;
         /* 0x094 */ public float DistanceReportMax;
-        /* 0x098 */ public float DistanceSquishhScaleToListener;
+        /* 0x098 */ public float DistanceSquishScaleToListener;
         /* 0x09C */ public float DistanceSquishMaxTravel;
         /* 0x0A0 */ public float AtlasStationActiveDistance;
         /* 0x0A4 */ public float MiniStationActiveDistance;

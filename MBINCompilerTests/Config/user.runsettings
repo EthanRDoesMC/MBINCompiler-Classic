@@ -18,7 +18,7 @@
 <RunSettings>  
   
   <TestRunParameters>
-    <Parameter name="InputFolder" value="X:/GameLibrary/No Mans Sky v1.38/GAMEDATA" />
+    <Parameter name="InputFolder" value="D:/Program Files (x86)/Steam/steamapps/common/No Man's Sky Atlas Rises/GAMEDATA" />
   </TestRunParameters>  
  
 </RunSettings>  

@@ -1,4 +1,4 @@
-namespace libMBIN.Models.Structs
+ namespace libMBIN.Models.Structs
 {
     public class GcGalaxyGlobals : NMSTemplate
     {

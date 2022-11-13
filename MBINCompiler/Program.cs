@@ -240,7 +240,6 @@ namespace MBINCompiler {
         /// <param name="showHelp">If true, also calls <see cref="ShowHelp()"/>.</param>
         /// <param name="exitCode">The value to return, unless <paramref name="showHelp"/> is true.</param>
         /// <returns>Returns 1 if <paramref name="showHelp"/> is true, otherwise <paramref name="exitCode"/>.</returns>
-        /// <summary>
         static int ShowError(string msg, bool showHelp = false, int exitCode = 2) {
             Console.WriteLine( $"ERROR: {msg}\n" );
             if (showHelp) {
