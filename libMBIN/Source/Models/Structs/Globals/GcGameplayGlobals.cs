@@ -2,12 +2,12 @@ namespace libMBIN.Models.Structs
 {
     public class GcGameplayGlobals : NMSTemplate
     {
-        /* 0X0 */ public float Unknown;
-        /* 0X4 */ public float Unknown4;
+        /* 0X0 */ public float MissionEventAllowResetDistance; // ?
+        /* 0X4 */ public float Unknown4; // maybe AllRecipesKnownNaniteMin/Max?
         /* 0X8 */ public float Unknown8;
-        /* 0XC */ public float UnknownC;
-        /* 0X10 */ public float Unknown10;
-        /* 0X14 */ public float Unknown14;
+        /* 0XC */ public float MaxPossibleShipDamagePotential;
+        /* 0X10 */ public float BuildingPlayerBaseIconOffset;
+        /* 0X14 */ public float Unknown14; // i have no idea what these are
         /* 0X18 */ public float Unknown18;
         /* 0X1C */ public float Unknown1C;
         /* 0X20 */ public float Unknown20;
@@ -19,66 +19,66 @@ namespace libMBIN.Models.Structs
         /* 0X38 */ public float Unknown38;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x3C */ public byte[] Padding3C;
-        /* 0x40 */ public GcScanEffectData Unknown40;
+        /* 0x40 */ public GcScanEffectData Unknown40; // table until 130
         /* 0x90 */ public GcScanEffectData Unknown90;
         /* 0xE0 */ public GcScanEffectData UnknownE0;
         /* 0x130 */ public GcScanEffectData Unknown130;
 
-        /* 0X180 */ public int UnknownInt180;
-        /* 0X184 */ public float Unknown184;
-        /* 0X188 */ public float Unknown188;
-        /* 0X18C */ public float Unknown18C;
-        /* 0X190 */ public float Unknown190;
-        /* 0X194 */ public bool Unknown194;
-        /* 0X198 */ public int UnknownInt198;
-        /* 0X19C */ public int UnknownInt19C;
-        /* 0X1A0 */ public float Unknown1A0;
-        /* 0X1A4 */ public float Unknown1A4;
-        /* 0X1A8 */ public float Unknown1A8;
-        /* 0X1AC */ public int UnknownInt1AC;
-        /* 0X1B0 */ public float Unknown1B0;
-        /* 0X1B4 */ public int UnknownInt1B4;
-        /* 0X1B8 */ public int UnknownInt1B8;
-        /* 0X1BC */ public int UnknownInt1BC;
-        /* 0X1C0 */ public float Unknown1C0;
-        /* 0X1C4 */ public float Unknown1C4;
-        /* 0X1C8 */ public int UnknownInt1C8;
+        /* 0X180 */ public int MaxNumMissionsFromMissionGiver;
+        /* 0X184 */ public float InteractionMessageModuleDisplayTime;
+        /* 0X188 */ public float InteractionAttractTime;
+        /* 0X18C */ public float InteractionDescriptionTextTime;
+        /* 0X190 */ public float InteractionMinTimeForResponseText;
+        /* 0X194 */ public bool InteractionOverride; // = false
+        /* 0X198 */ public int InteractionOverrideFrom; // = 2
+        /* 0X19C */ public int InteractionOverrideTo; // = 47, probably an enum?
+        /* 0X1A0 */ public float DestroyEffectHeight;
+        /* 0X1A4 */ public float DestroyEffectMaxScale;
+        /* 0X1A8 */ public float EventTargetSpeed;
+        /* 0X1AC */ public int SpecialMiningAmount;
+        /* 0X1B0 */ public float SpecialMiningTime;
+        /* 0X1B4 */ public int HardModeTechDamageMidNum;
+        /* 0X1B8 */ public int HardModeTechDamageMidPercent;
+        /* 0X1BC */ public int HardModeTechDamageHighPercent;
+        /* 0X1C0 */ public float PirateInterestOverride;
+        /* 0X1C4 */ public float PirateInterestDistance;
+        /* 0X1C8 */ public int UnknownInt1C8; // PirateInterestLevels 1C8..1D0
         /* 0X1CC */ public int UnknownInt1CC;
         /* 0X1D0 */ public int UnknownInt1D0;
-        /* 0X1D4 */ public float Unknown1D4;
-        /* 0X1D8 */ public int WarpsBetweenSpaceBattles;
-        /* 0X1DC */ public float HoursBetweenSpaceBattles;
-        /* 0X1E0 */ public float Unknown1E0;
-        /* 0X1E4 */ public float Unknown1E4;
-        /* 0X1E8 */ public float Unknown1E8;
-        /* 0X1EC */ public float Unknown1EC;
-        /* 0X1F0 */ public float Unknown1F0;
-        /* 0X1F4 */ public float Unknown1F4;
-        /* 0X1F8 */ public float Unknown1F8;
-        /* 0X1FC */ public float Unknown1FC;
-        /* 0X200 */ public float Unknown200;
-        /* 0X204 */ public float Unknown204;
-        /* 0X208 */ public float Unknown208;
-        /* 0X20C */ public float Unknown20C;
-        /* 0X210 */ public float Unknown210;        // not used??
-        /* 0X214 */ public float Unknown214;
-        /* 0X218 */ public float Unknown218;
-        /* 0X21C */ public float Unknown21C;
-        /* 0X220 */ public float Unknown220;
-        /* 0X224 */ public float Unknown224;
-        /* 0X228 */ public float Unknown228;
-        /* 0X22C */ public float Unknown22C;
+        /* 0X1D4 */ public float SpaceCombatRadius;
+        /* 0X1D8 */ public int WarpsBetweenBattles; // line 256 in NEXT exml
+        /* 0X1DC */ public float HoursBetweenBattles;
+        /* 0X1E0 */ public float SpaceBattleRadius;
+        /* 0X1E4 */ public float FreighterBattleRadius;
+        /* 0X1E8 */ public float MissileMaxTurnAngle;
+        /* 0X1EC */ public float MissileLockTime;
+        /* 0X1F0 */ public float MissileReloadTime;
+        /* 0X1F4 */ public float MissileRotateMin;
+        /* 0X1F8 */ public float MissileRotateMax;
+        /* 0X1FC */ public float MissileMaxSpeed;
+        /* 0X200 */ public float MissileForceMin;
+        /* 0X204 */ public float MissileForceMax;
+        /* 0X208 */ public float MissileBrakeForceMin;
+        /* 0X20C */ public float MissileBrakeForceMax;
+        /* 0X210 */ public float MissileThreatTime;        // not used??
+        /* 0X214 */ public float MissileBreakTime;
+        /* 0X218 */ public float MissileHitRadius;
+        /* 0X21C */ public float MissileOffset;
+        /* 0X220 */ public float MissileMinCircleTime;
+        /* 0X224 */ public float MissileApproachTime;
+        /* 0X228 */ public float MissileRotateSpeed;
+        /* 0X22C */ public float Unknown22C; // likely related to scanning?
         /* 0X230 */ public float Unknown230;
         /* 0X234 */ public float Unknown234;
-        /* 0X238 */ public float Unknown238;
-        /* 0X23C */ public bool Unknown23C;         // something to do with building generation?? Maybe 'Don't generate buildings'?
-        /* 0X240 */ public int RearShotDamageMultiplier;
-        /* 0X244 */ public float Unknown244;
-        /* 0X248 */ public int UnknownInt248;
-        /* 0X24C */ public float Unknown24C;
-        /* 0X250 */ public float Unknown250;
-        /* 0X254 */ public float Unknown254;
-        /* 0X258 */ public float ExtremeSentinelChance;
+        /* 0X238 */ public float NewDiscoveryDisplayTime;
+        /* 0X23C */ public bool FailToFindBuildings;         // something to do with building generation?? Maybe 'Don't generate buildings'? // CLOSE, you got close! leaving annotation as it may help explain how finding buildings works
+        /* 0X240 */ public int CritDamage; //RearShotDamageMultiplier;
+        /* 0X244 */ public float CritScale;
+        /* 0X248 */ public int NumMissionsPerSolarSystem;
+        /* 0X24C */ public float EmergencyBuildingScanEventDistance;
+        /* 0X250 */ public float EmergencyBuildingScanEventTime;
+        /* 0X254 */ public float ProjectileLightIntensity;
+        /* 0X258 */ public float AggressiveSentinelProbability;
 
         /* the following is a GcExperienceTimers struct, but 
         I have expanded it so that the individual values can be named appropriately */
@@ -87,17 +87,17 @@ namespace libMBIN.Models.Structs
 	    /* 0x264 */ public Vector2f SentinelTimer_Default_or_Aggressive;       // for agressive sentinals and...
 	    /* 0x26C */ public Vector2f SentinelTimer_A;
 	    /* 0x274 */ public Vector2f SentinelTimer_B;
-
+// keeping expansion, this is good
         
-        /* 0x27C */ public int UnknownInt27C;
+        /* 0x27C */ public int FreighterStartPercent;
 
-        /* 0x280 */ public GcExperienceTimers Unknown280;
-        /* 0x2A0 */ public GcExperienceTimers NormalModePirateSpawns;
-        /* 0x2C0 */ public GcExperienceTimers HardModePirateSpawns;
-        /* 0X2E0 */ public float Unknown2E0;
+        /* 0x280 */ public GcExperienceTimers FreighterTimers;
+        /* 0x2A0 */ public GcExperienceTimers PirateTimers; // for normal mode
+        /* 0x2C0 */ public GcExperienceTimers HardPirateTimers; // for hard mode
+        /* 0X2E0 */ public float Unknown2E0; // PirateEarlySpawnChances 2E0..2E8
         /* 0X2E4 */ public float Unknown2E4;
         /* 0X2E8 */ public float Unknown2E8;
-        /* 0X2EC */ public float Unknown2EC;
+        /* 0X2EC */ public float PirateEarlySpawnTime;
 
         // OnPlanet FlybyTimer determination
         /* 0x2F0 */ public int FlybyTimer_Default_Chance_percent;
@@ -105,8 +105,8 @@ namespace libMBIN.Models.Structs
 	    /* 0x2F8 */ public Vector2f FlybyTimer_Default;
 	    /* 0x300 */ public Vector2f FlybyTimer_A;                     
 	    /* 0x308 */ public Vector2f FlybyTimer_B_or_Aggressive;                            // planetdata flyby on agressive sentinal planets (maybe??)
-
-        /* 0x310 */ public GcExperienceTimers RandomSpaceFlybySpawns;
+// maybe these should be their own type? wouldn't hurt anything
+        /* 0x310 */ public GcExperienceTimers SpaceFlybyTimers;
 
         /* 0x330 */ public int UnknownInt330;
         /* 0X334 */ public int UnknownInt334;
