@@ -2,122 +2,96 @@ namespace libMBIN.Models.Structs
 {
     public class GcUIGlobals : NMSTemplate
     {
-        /* 0x0 */ public bool Unknown0;
-        /* 0x1 */ public bool Unknown1;
+        /* 0x0 */ public bool Unknown0; // = false // one of these is MAYBE AlwaysCloseQuickMenu
+        /* 0x1 */ public bool Unknown1; // = true
         [NMS(Size = 0xE, Ignore = true)]
         /* 0x2 */ public byte[] Padding2;
-        /* 0x10 */ public float Unknown10;
-        /* 0x14 */ public float Unknown14;
-        /* 0x18 */ public float Unknown18;
-        /* 0x1C */ public float Unknown1C;
-        /* 0x20 */ public float Unknown20;
-        /* 0x24 */ public float Unknown24;
-        /* 0x28 */ public float TabTransitionSpeed;
-        /* 0X2C */ public int UnknownInt2C;
-        /* 0X30 */ public int UnknownInt30;
-        /* 0X34 */ public int UnknownInt34;
+        /* 0x10 */ public Colour TransferSendPopupColour; // hmm... matches values, but it doesn't feel right
+        /* 0x20 */ public float BountyMarkerOffset;
+        /* 0x24 */ public float TransitionOffset;
+        /* 0x28 */ public float PageTurnTime; // TabTransitionSpeed; // line 347 in NEXT exml
+        /* 0X2C */ public TkCurveType PageTurnCurve;
+        /* 0X30 */ public TkCurveType PageTurnFadeCurve;
+        /* 0X34 */ public int MaxDialogCharSizeRoman;
         [NMS(Size = 0x20)]
-        /* 0x38 */ public string Unknown38;     // string is '...'
-        /* 0x58 */ public int UnknownInt3C;
+        /* 0x38 */ public string MaxDialogCharSizeRomanString;     // string is '...'
+        /* 0x58 */ public int MaxDialogCharSizeIdeographic;
         [NMS(Size = 0x20)]
-        /* 0x5C */ public string Unknown5C;     // string is '...'
+        /* 0x5C */ public string MaxDialogCharSizeIdeographicString;     // string is '...'
 
-        /* 0X7C */ public float Unknown7C;
-        /* 0X80 */ public float Unknown80;
-        /* 0X84 */ public bool Unknown84;
-        /* 0X88 */ public float Unknown88;
-        /* 0X8C */ public float Unknown8C;
-        /* 0X90 */ public float Unknown90;
-        /* 0X94 */ public float Unknown94;
-        /* 0X98 */ public float Unknown98;
-        /* 0X9C */ public float Unknown9C;
-        /* 0XA0 */ public float UnknownA0;
-        /* 0XA4 */ public float UnknownA4;
-        /* 0XA8 */ public float UnknownA8;
-        /* 0XAC */ public float UnknownAC;
-        /* 0XB0 */ public float UnknownB0;
-        /* 0XB4 */ public float UnknownB4;
-        /* 0XB8 */ public float UnknownB8;
-        /* 0XBC */ public float UnknownBC;
-        /* 0XC0 */ public float UnknownC0;
-        /* 0XC4 */ public float UnknownC4;
-        /* 0XC8 */ public float UnknownC8;
-        /* 0XCC */ public float UnknownCC;
-        /* 0XD0 */ public float UnknownD0;
-        /* 0XD4 */ public float UnknownD4;
-        /* 0XD8 */ public float UnknownD8;
-        /* 0XDC */ public float UnknownDC;
-        /* 0XE0 */ public float UnknownE0;
-        /* 0XE4 */ public float UnknownE4;
-        /* 0XE8 */ public float UnknownE8;
-        /* 0XEC */ public float UnknownEC;
-        /* 0XF0 */ public float UnknownF0;
-        /* 0XF4 */ public float UnknownF4;
-        /* 0XF8 */ public float UnknownF8;
-        /* 0XFC */ public float UnknownFC;
-        /* 0X100 */ public int UnknownInt100;
-        /* 0X104 */ public int UnknownInt104;
-        /* 0X108 */ public int UnknownInt108;
-        /* 0X10C */ public float Unknown10C;
-        /* 0X110 */ public float Unknown110;
-        /* 0X114 */ public float Unknown114;
-        /* 0X118 */ public float Unknown118;
-        /* 0X11C */ public float Unknown11C;
-        /* 0X120 */ public float Unknown120;
-        /* 0X124 */ public float Unknown124;
-        /* 0X128 */ public float Unknown128;
-        /* 0X12C */ public float Unknown12C;
-        /* 0X130 */ public float Unknown130;
-        /* 0X134 */ public float Unknown134;
-        /* 0X138 */ public float Unknown138;
-        /* 0X13C */ public float Unknown13C;
-        /* 0X140 */ public float Unknown140;
+        /* 0X7C */ public float ShipOverheatSwitchMessageWait;
+        /* 0X80 */ public float ShipOverheatSwitchMessageTime;
+        /* 0X84 */ public bool LeadTargetEnabled;
+        /* 0X88 */ public Vector2f SaveIconPosition;
+        /* 0X90 */ public float MissionStartEndTime;
+        /* 0X94 */ public float MissionStartEndOSDTime;
+        /* 0X98 */ public float MissionStartEndOSDTimeProcedural;
+        /* 0X9C */ public float StandingRewardOSDTime;
+        /* 0XA0 */ public Colour MissionOSDMessageBarColour;
+        /* 0XB0 */ public Colour NotificationDefaultColour;
+        /* 0XC0 */ public Colour NotificationDangerColour;
+        /* 0XD0 */ public Colour NotificationInfoColour;
+        /* 0XE0 */ public Colour NotificationUrgentColour;
+        /* 0XF0 */ public float DamageDirectionIndicatorRadius; // NEXT has this as "ShipDamage..." but also has an OnFoot version
+        /* 0XF4 */ public float DamageDirectionIndicatorFadeRange; // i'm assuming there wasn't a distinction here prior to NEXT
+        /* 0XF8 */ public Vector2f DialogPageCursorOffset;
+        /* 0X100 */ public int MissionSpecificMissionPercent;
+        /* 0X104 */ public int MissionLoopCount;
+        /* 0X108 */ public int MissionSeedOffset;
+        /* 0X10C */ public float Unknown10C; // = 0, vanished in NEXT
+        /* 0X110 */ public Vector4f SpaceMapCockpitOffset;
+        /* 0X120 */ public float SpaceMapCockpitScale;
+        /* 0X124 */ public float SpaceMapCockpitAngle;
+        /* 0X128 */ public float TargetDisplayScale;
+        /* 0X12C */ public float TargetDisplayShipScale;
+        /* 0X130 */ public float Unknown130; // = 0; NEXT has TargetDisplayShipOffset = "" (?????)
+        /* 0X134 */ public float Unknown134; // = 0
+        /* 0X138 */ public float Unknown138; // = 0
+        /* 0X13C */ public float Unknown13C; // = 0
+        /* 0X140 */ public float TargetDisplayDamageFlashTime;
         [NMS(Size = 0xC, Ignore = true)]
         /* 0x144 */ public byte[] Padding144;
-        /* 0x150 */ public GcScanEffectData Unknown150;
-        /* 0x1A0 */ public bool Unknown1A0;
-        /* 0X1A4 */ public float Unknown1A4;
-        /* 0X1A8 */ public float Unknown1A8;
-        /* 0X1AC */ public float Unknown1AC;
-        /* 0X1B0 */ public float Unknown1B0;
-        /* 0X1B4 */ public float Unknown1B4;
-        /* 0X1B8 */ public float Unknown1B8;
-        /* 0X1BC */ public float Unknown1BC;
-        /* 0X1C0 */ public float Unknown1C0;
-        /* 0X1C4 */ public float Unknown1C4;
-        /* 0X1C8 */ public float Unknown1C8;
-        /* 0X1CC */ public float Unknown1CC;
-        /* 0X1D0 */ public float Unknown1D0;
-        /* 0X1D4 */ public float Unknown1D4;
-        /* 0X1D8 */ public float Unknown1D8;
-        /* 0X1DC */ public float Unknown1DC;
-        /* 0x1E0 */ public bool Unknown1E0;
+        /* 0x150 */ public GcScanEffectData TargetDisplayScanEffect;
+        /* 0x1A0 */ public bool ProgressiveDialogStyle; // = True; anyone wanna try setting it to false?
+        /* 0X1A4 */ public float CommunicatorMessageTime;
+        /* 0X1A8 */ public float Unknown1A8; // = 0
+        /* 0X1AC */ public float Unknown1AC; // = 0
+        /* 0X1B0 */ public Colour CommunicatorMessageColour;
+        /* 0X1C0 */ public float GridFlickerBaseAlpha;
+        /* 0X1C4 */ public float GridFlickerFreq;
+        /* 0X1C8 */ public float GridFlickerAmp;
+        /* 0X1CC */ public float HUDMarkerLabelWidthMultiplier;
+        /* 0X1D0 */ public float HUDMarkerLabelBaseWidth; // NEXT has HUDMarkerLabelArriveDistance after
+        /* 0X1D4 */ public float HUDMarkerLabelDisplayDistance;
+        /* 0X1D8 */ public float Unknown1D8; // = 6; not present in NEXT
+        /* 0X1DC */ public float HUDMarkerNonActiveMissionAlpha;
+        /* 0x1E0 */ public bool DebugMarkerLabels;
         [NMS(Size = 0xF, Ignore = true)]
         /* 0x1E1 */ public byte[] Padding1E1;
-        /* 0x1F0 */ public GcScanEffectData Unknown1F0;
-        /* 0x240 */ public bool Unknown240;
-        /* 0X244 */ public float Unknown244;
-        /* 0X248 */ public float Unknown248;
-        /* 0X24C */ public float Unknown24C;
-        /* 0X250 */ public float Unknown250;
-        /* 0X254 */ public float Unknown254;
-        /* 0X258 */ public float Unknown258;
-        /* 0X25C */ public float Unknown25C;
-        /* 0X260 */ public float Unknown260;
-        /* 0X264 */ public float Unknown264;
-        /* 0X268 */ public float Unknown268;
-        /* 0X26C */ public float Unknown26C;
-        /* 0X270 */ public float Unknown270;
-        /* 0X274 */ public float Unknown274;
-        /* 0X278 */ public float Unknown278;
-        /* 0X27C */ public float Unknown27C;
-        /* 0X280 */ public float Unknown280;
-        /* 0X284 */ public float Unknown284;
-        /* 0X288 */ public float Unknown288;
-        /* 0X28C */ public float Unknown28C;
-        /* 0X290 */ public float Unknown290;
-        /* 0X294 */ public float Unknown294;
-        /* 0X298 */ public float Unknown298;
+        /* 0x1F0 */ public GcScanEffectData DebugEditorPreviewEffect;
+        /* 0x240 */ public bool ShowDamageNumbers;
+        /* 0X244 */ public float QuickMenuCloseTime;
+        /* 0X248 */ public float QuickMenuErrorTime;
+        /* 0X24C */ public float FrontendWaitResponse;
+        /* 0X250 */ public float FrontendWaitInitial;
+        /* 0X254 */ public float FrontendWaitInitialTerminal;
+        /* 0X258 */ public float FrontendWaitFadeTextOut;
+        /* 0X25C */ public float FrontendWaitFadeTextFrameOut;
+        /* 0X260 */ public float FrontendWaitFadeProgressiveDialogOut;
+        /* 0X264 */ public float FrontendWaitResponseOffset;
+        /* 0X268 */ public float TalkBoxAlienTextSpeed;
+        /* 0X26C */ public float TalkBoxAlienTextTimeMin;
+        /* 0X270 */ public float TalkBoxAlienTextTimeMax;
+        /* 0X274 */ public float DescriptionTextDelay;
+        /* 0X278 */ public float DescriptionTextSpeed;
+        /* 0X27C */ public float DescriptionTextSpeedProgressive;
+        /* 0X280 */ public float DescriptionTextTimeMin;
+        /* 0X284 */ public float DescriptionTextTimeMax;
+        /* 0X288 */ public float ConsoleTextSpeed;
+        /* 0X28C */ public float ConsoleTextTimeMin;
+        /* 0X290 */ public float ConsoleTextTimeMax;
+        /* 0X294 */ public float HoverOffscreenBorder;
+        /* 0X298 */ public float TimedEventLookTime; // line 505 in Next, line 142 in AR, coming back to this later
         /* 0X29C */ public float Unknown29C;
         /* 0X2A0 */ public float Unknown2A0;
         /* 0X2A4 */ public float Unknown2A4;
