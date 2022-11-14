@@ -3,49 +3,49 @@
     public class GcSimulationGlobals : NMSTemplate
     {
         [NMS(Size = 0x80)]
-        public string StartScene;
+        public string StartingSceneFile;
         [NMS(Size = 0x80)]
-        public string MultiToolScene;
+        public string MultitoolFile;
 
-        public ulong Unknown100; // PlanetSimulationSeed perhaps? used in a function containing string "PlanetRoot", which is called by cGcSimulation::Construct()
+        public ulong ProceduralBuildingsGenerationSeed; // PlanetSimulationSeed perhaps? used in a function containing string "PlanetRoot", which is called by cGcSimulation::Construct()
 
         [NMS(Size = 0x80)]
-        public string SpaceStationScene;
+        public string SpaceStationFile;
         [NMS(Size = 1)]
-        public NMSString0x80[] BlackHoleScenes;
+        public NMSString0x80[] BlackHoleAnomalies; //wtf
         [NMS(Size = 0xC)]
-        public NMSString0x80[] AtlasStationScenes;
+        public NMSString0x80[] AtlasStationAnomalies;
         [NMS(Size = 0x80)]
-        public string AnomalyScene;
+        public string SpaceAnomalyFile;
         [NMS(Size = 0x80)]
-        public string Unknown808; // not set
+        public string None; // not set
         [NMS(Size = 0x80)]
-        public string RobotDroneScene;
+        public string PlacementDroneFile;
         [NMS(Size = 0x80)]
-        public string HeavyAirCaveScene;
+        public string HeavyAirCave;
         [NMS(Size = 0x80)]
-        public string HeavyAirUnderwaterScene;
+        public string HeavyAirUnderwater;
         [NMS(Size = 3)]
-        public NMSString0x80[] LaserScenes;
+        public NMSString0x80[] PrefetchScenegraphResources_aka_LaserScenes; //LaserScenes; i'm not leaving people guessing with a name like that
         [NMS(Size = 2)]
-        public NMSString0x80[] WaterMaterials;
+        public NMSString0x80[] PrefetchMaterialResources_aka_WaterMaterials; //WaterMaterials;
         [NMS(Size = 0x80)]
-        public string PlanetAtmosphereScene;
+        public string PlanetAtmosphereFile;
         [NMS(Size = 0x80)]
-        public string PlanetAtmosphereMaterial;
+        public string PlanetAtmosphereMaterialFile;
         [NMS(Size = 0x80)]
-        public string PlanetMaterial;
+        public string PlanetMaterialFile;
         [NMS(Size = 0x80)]
-        public string PlanetWaterMaterial;
+        public string PlanetWaterMaterialFile;
         [NMS(Size = 6)]
-        public NMSString0x80[] TerrainLODMaterials;
+        public NMSString0x80[] PlanetTerrainMaterials_aka_TerrainLODMaterials; //TerrainLODMaterials;
         [NMS(Size = 0x10)]
-        public NMSString0x80[] BiomeTilemapTextures;
+        public NMSString0x80[] PrefetchTextureResources_aka_BiomeTilemapTextures; //BiomeTilemapTextures;
         [NMS(Size = 0x80)]
-        public string WarpTunnelScene;
+        public string WarpTunnelFile;
         [NMS(Size = 0x80)]
-        public string WarpTunnelBlackHoleScene;
-        [NMS(Size = 3)]
+        public string BlackHoleTunnelFile;
+        [NMS(Size = 3, EnumValue = new[] { "TeleportTunnelFile", "PortalTunnelFile", "PortalStoryTunnelFile" })]
         public NMSString0x80[] WarpPortalScenes;
     }
 }

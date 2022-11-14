@@ -10,7 +10,7 @@
         public float Unknown10;
         public float Unknown14;
         public float Unknown18; // unused?
-        /* 0x01C */ public float PlanetAddShelterChance;
+        /* 0x01C */ public float ChanceOfAddingShelter; // line 39 in NEXT exml
 
         public float Unknown20;
         public float Unknown24; // unused?

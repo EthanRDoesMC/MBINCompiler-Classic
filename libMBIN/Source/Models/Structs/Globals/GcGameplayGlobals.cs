@@ -19,7 +19,7 @@ namespace libMBIN.Models.Structs
         /* 0X38 */ public float Unknown38;
         [NMS(Size = 0x4, Ignore = true)]
         /* 0x3C */ public byte[] Padding3C;
-        /* 0x40 */ public GcScanEffectData Unknown40; // table until 130
+        /* 0x40 */ public GcScanEffectData Unknown40; // table 40..130
         /* 0x90 */ public GcScanEffectData Unknown90;
         /* 0xE0 */ public GcScanEffectData UnknownE0;
         /* 0x130 */ public GcScanEffectData Unknown130;
