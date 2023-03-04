@@ -66,7 +66,7 @@
         [NMS(Size = 0x10)]
         /* 0x110 */ public string CommonAsteroidResourceFuel;
         [NMS(Size = 0x10)]
-        /* 0x120 */ public string CommonAsteroidResourceMain
+        /* 0x120 */ public string CommonAsteroidResourceMain;
 
         /* 0x130 */ public float CommonAsteroidResourceFuelOdds;
         /* 0x134 */ public int CommonAsteroidHealth;
@@ -88,7 +88,7 @@
         /* 0x170 */ public float Unknown170; // = 0.1
         /* 0x174 */ public float Unknown174; // = 0.15
         /* 0x178 */ public float Unknown178; // = 0.2
-        /* 0x17C */ public int CivilianTraderSpaceshipsCacheCount_aka_ShipVariationsPerSystem;
+        /* 0x17C */ public int CivilianTraderSpaceshipsCacheCount;
         /* 0x180 */ public Vector3f SpaceshipSpawnFreqMultipliers;
 
         [NMS(Size = 0x7)]
